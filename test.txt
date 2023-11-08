@@ -1,4 +1,0 @@
-hoje vamos
-ler um
-arquivo, linha por linha
-preste atencao!

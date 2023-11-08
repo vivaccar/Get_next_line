@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: vinivaccari <vinivaccari@student.42.fr>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/04 16:12:20 by vivaccar          #+#    #+#             */
-/*   Updated: 2023/11/08 18:04:58 by vinivaccari      ###   ########.fr       */
+/*   Created: 2023/11/08 18:37:50 by vinivaccari       #+#    #+#             */
+/*   Updated: 2023/11/08 18:59:54 by vinivaccari      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*ft_extractline(char *text)
 {
@@ -94,36 +94,37 @@ char	*ft_read(int fd, char *text)
 char	*get_next_line(int fd)
 {
 	char		*line;
-	static char	*text;
+	static char	*text[1024];
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
-	text = ft_read(fd, text);
-	if (!text)
+	text[fd] = ft_read(fd, text[fd]);
+	if (!text[fd])
 		return (NULL);
-	line = ft_extractline(text);
-	text = ft_delete(text);
+	line = ft_extractline(text[fd]);
+	text[fd] = ft_delete(text[fd]);
 	return (line);
 }
 
 /*#include <fcntl.h>
 #include <stdio.h>
-int	main(void)
-{
-	int		fd;
-	char	*test;
 
-	fd = open("test.txt", O_RDONLY);
-	test = get_next_line(fd);
-	printf("%s", test);
-	test = get_next_line(fd);
-	printf("%s", test);
- 	test = get_next_line(fd);
-	printf("%s", test);
- 	test = get_next_line(fd);
-	printf("%s", test);
-	test = get_next_line(fd);
-	printf("%s", test); 
- 	close(fd);
-	free(test);
+int main(void)
+{
+    int fd0 = open("test0.txt", O_RDONLY);
+    int fd1 = open("test1.txt", O_RDONLY);
+    int fd2 = open("test2.txt", O_RDONLY);
+
+    printf("1st text, 1st line: %s", get_next_line(fd0));
+    printf("1st text, 2nd line: %s", get_next_line(fd0));
+    printf("1st text, 3rd line: %s", get_next_line(fd0));
+    printf("1st text, 4th line: %s\n", get_next_line(fd0));
+    printf("2nd text, 1st line: %s", get_next_line(fd1));
+    printf("2nd text, 2nd line: %s", get_next_line(fd1));
+    printf("2nd text, 3rd line: %s", get_next_line(fd1));
+    printf("2nd text, 4th line: %s\n", get_next_line(fd1));
+    printf("3rd text, 1st line: %s", get_next_line(fd2));
+    printf("3rd text, 2nd line: %s", get_next_line(fd2));
+    printf("3rd text, 3rd line: %s", get_next_line(fd2));
+    printf("3rd text, 4th line: %s\n", get_next_line(fd2));
 }*/
