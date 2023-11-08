@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vinivaccari <vinivaccari@student.42.fr>    +#+  +:+       +#+        */
+/*   By: vivaccar <vivaccar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 13:01:35 by vinivaccari       #+#    #+#             */
-/*   Updated: 2023/11/08 14:20:04 by vinivaccari      ###   ########.fr       */
+/*   Created: 2023/11/04 16:12:20 by vivaccar          #+#    #+#             */
+/*   Updated: 2023/11/08 16:40:59 by vivaccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
-char	*ft_line(char *text)
+char	*ft_extractline(char *text)
 {
 	int		i;
 	char	*line;
@@ -101,7 +101,30 @@ char	*get_next_line(int fd)
 	text = ft_read(fd, text);
 	if (!text)
 		return (NULL);
-	line = ft_line(text);
+	line = ft_extractline(text);
 	text = ft_delete(text);
 	return (line);
 }
+
+/* #include <fcntl.h>
+#include <stdio.h>
+int	main(void)
+{
+	int		fd;
+	char	*test;
+
+	fd = open("test.txt", O_RDONLY);
+	test = get_next_line(fd);
+	printf("%s", test);
+	test = get_next_line(fd);
+	printf("%s", test);
+ 	test = get_next_line(fd);
+	printf("%s", test);
+ 	test = get_next_line(fd);
+	printf("%s", test);
+	test = get_next_line(fd);
+	printf("%s", test); 
+ 	close(fd);
+	free(test);
+}
+ */

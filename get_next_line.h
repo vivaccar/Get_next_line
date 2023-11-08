@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vinivaccari <vinivaccari@student.42.fr>    +#+  +:+       +#+        */
+/*   By: vivaccar <vivaccar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 13:02:00 by vinivaccari       #+#    #+#             */
-/*   Updated: 2023/11/08 14:01:28 by vinivaccari      ###   ########.fr       */
+/*   Created: 2023/11/04 14:22:49 by vivaccar          #+#    #+#             */
+/*   Updated: 2023/11/08 16:40:38 by vivaccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
