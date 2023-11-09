@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vinivaccari <vinivaccari@student.42.fr>    +#+  +:+       +#+        */
+/*   By: vivaccar <vivaccar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 18:37:56 by vinivaccari       #+#    #+#             */
-/*   Updated: 2023/11/08 18:40:45 by vinivaccari      ###   ########.fr       */
+/*   Created: 2023/11/09 11:34:29 by vivaccar          #+#    #+#             */
+/*   Updated: 2023/11/09 11:35:32 by vivaccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

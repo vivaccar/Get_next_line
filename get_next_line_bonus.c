@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vinivaccari <vinivaccari@student.42.fr>    +#+  +:+       +#+        */
+/*   By: vivaccar <vivaccar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/08 18:37:50 by vinivaccari       #+#    #+#             */
-/*   Updated: 2023/11/08 18:59:54 by vinivaccari      ###   ########.fr       */
+/*   Created: 2023/11/09 11:35:07 by vivaccar          #+#    #+#             */
+/*   Updated: 2023/11/09 11:35:10 by vivaccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-/*#include <fcntl.h>
+/* #include <fcntl.h>
 #include <stdio.h>
 
 int main(void)
@@ -127,4 +127,4 @@ int main(void)
     printf("3rd text, 2nd line: %s", get_next_line(fd2));
     printf("3rd text, 3rd line: %s", get_next_line(fd2));
     printf("3rd text, 4th line: %s\n", get_next_line(fd2));
-}*/
+} */

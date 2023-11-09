@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vinivaccari <vinivaccari@student.42.fr>    +#+  +:+       +#+        */
+/*   By: vivaccar <vivaccar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 14:22:49 by vivaccar          #+#    #+#             */
-/*   Updated: 2023/11/08 18:19:02 by vinivaccari      ###   ########.fr       */
+/*   Updated: 2023/11/09 11:18:17 by vivaccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,8 @@
 # define GET_NEXT_LINE_H
 
 # include <stdlib.h>
-# include <sys/types.h>
-# include <sys/uio.h>
 # include <unistd.h>
-
-#ifndef BUFFER_SIZE
-#define BUFFER_SIZE 3
-#endif
+# include <stddef.h>
 
 char	*get_next_line(int fd);
 size_t	ft_strlen(char *str);

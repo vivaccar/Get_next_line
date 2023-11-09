@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vinivaccari <vinivaccari@student.42.fr>    +#+  +:+       +#+        */
+/*   By: vivaccar <vivaccar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/04 16:12:20 by vivaccar          #+#    #+#             */
-/*   Updated: 2023/11/08 18:04:58 by vinivaccari      ###   ########.fr       */
+/*   Updated: 2023/11/09 11:19:49 by vivaccar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-/*#include <fcntl.h>
+/* #include <fcntl.h>
 #include <stdio.h>
 int	main(void)
 {
@@ -126,4 +126,4 @@ int	main(void)
 	printf("%s", test); 
  	close(fd);
 	free(test);
-}*/
+} */
